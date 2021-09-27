@@ -25,7 +25,11 @@ kotlin {
     explicitApi()
 
     infra {
-        target("linuxX64")
+        common("linux") {
+            target("linuxX64")
+            target("linuxArm64")
+        }
+
         target("mingwX64")
 
         common("darwin") {
